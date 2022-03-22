@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="WPFThreads" Height="450" Width="450" Background="White" ResizeMode="NoResize" Topmost="True">
+        Title="WPFThreads" Height="450" Width="450" Background="White" ResizeMode="NoResize" Closing="Window_Closing">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="8*"/>
@@ -18,8 +18,8 @@
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <Label Content="Таймер" VerticalAlignment="Center"/>
-            <TextBox Width="100" VerticalAlignment="Center"/>
-            <Button Name="ChangeTimerButton" Margin="5" Content="Изменить" VerticalAlignment="Center" Click="ChangeTimerButton_Click"/>
+            <TextBox Name="TimerText" Width="100" VerticalAlignment="Center" Text="1"/>
+            <Label Content="сек." VerticalAlignment="Center"/>
         </StackPanel>
 
         <Button Name="StartButton" Grid.Row="2" Content="Запуск" Height="43" VerticalAlignment="Top" Click="StartButton_Click"/>
