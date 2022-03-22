@@ -3,10 +3,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WPFThreads"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="WPFThreads" Height="450" Width="450" Background="White" ResizeMode="NoResize" Topmost="True">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Hidden" Background="LightGray">
+            <TextBlock Name="fieldFibonacci" TextWrapping="Wrap" Width="400"/>
+        </ScrollViewer>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label Content="Таймер" VerticalAlignment="Center"/>
+            <TextBox Width="100" VerticalAlignment="Center"/>
+            <Button Name="ChangeTimerButton" Margin="5" Content="Изменить" VerticalAlignment="Center" Click="ChangeTimerButton_Click"/>
+        </StackPanel>
+
+        <Button Name="StartButton" Grid.Row="2" Content="Запуск" Height="43" VerticalAlignment="Top" Click="StartButton_Click"/>
     </Grid>
 </Window>

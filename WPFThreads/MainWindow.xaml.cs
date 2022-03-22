@@ -24,5 +24,15 @@ namespace WPFThreads
         {
             InitializeComponent();
         }
+
+        private void ChangeTimerButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
