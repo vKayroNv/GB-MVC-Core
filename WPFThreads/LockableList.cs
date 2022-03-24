@@ -8,7 +8,7 @@ namespace WPFThreads
 {
     public class LockableList<T>
     {
-        private List<T> _list = new();
+        private readonly List<T> _list = new();
 
         public void Add(T item)
         {
