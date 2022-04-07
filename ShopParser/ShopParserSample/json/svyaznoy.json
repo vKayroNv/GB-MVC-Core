@@ -1,0 +1,51 @@
+{
+	"id": 6376291,
+	"name": "Galaxy M52 6/128GB",
+	"rating": 10,
+	"preview_image": "https://cdn.svyaznoy.ru/upload/iblock/846/samsung_pc_sm-m526b_black_1500x1500_1.jpg",
+	"articles": [
+		"883550",
+		"PREORDER_6376291"
+	],
+	"full_name": "Samsung Galaxy M52 6/128GB (черный)",
+	"brand": {
+		"id": 218237,
+		"name": "Samsung",
+		"code": "samsung"
+	},
+	"image": "https://cdn.svyaznoy.ru/upload/iblock/b5a/samsung_pc_sm-m526b_black_1500x1500_1.jpg",
+	"category": {
+		"id": 224,
+		"parent_id": 17,
+		"name": "Мобильные телефоны"
+	},
+	"offer": {
+		"quantity": 31,
+		"quantity_zone": "1",
+		"quantity_store": "30",
+		"quantity_in_store": null,
+		"locations": [
+			"online_store"
+		],
+		"delivery_rate": 6,
+		"available": 1,
+		"preorder": 0,
+		"price": 34990,
+		"price_old": 37990,
+		"order_type": "buy",
+		"location": 1,
+		"is_only_third_party_vendor": false
+	},
+	"max_quantity": 10,
+	"attr": {
+		"comments_count": 0,
+		"questions_count": 5,
+		"answers_count": 5
+	},
+	"special_offer": null,
+	"is_only_rtt_preorder": false,
+	"text_for_product": null,
+	"is_consumed": false,
+	"supplier_offers": [],
+	"vat": null
+}

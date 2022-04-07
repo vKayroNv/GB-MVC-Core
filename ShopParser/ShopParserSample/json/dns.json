@@ -1,0 +1,35 @@
+{
+    "result": true,
+    "data": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "6.5\" Смартфон Samsung Galaxy A52 128 ГБ черный",
+        "description": "Смартфон Samsung Galaxy A52 в классическом корпусе черного цвета объединил возможности «топовых» устройств. Он может снимать на свою 64-мегапиксельную камеру, состоящую из 4 модулей, безупречный контент. Для безукоризненных селфи предусмотрен фронтальный модуль на 32 Мп. Фотофильтры добавляют веселья в этот процесс.\nМодули бесконтактной оплаты Google Pay и Samsung Pay – еще один плюс этого устройства. Вам больше не нужно носить с собой кошелек! С процессором Qualcomm Snapdragon 720G на 8 ядер модель дает возможность проходить даже требовательные к ресурсу игры. За счет встроенной памяти объемом 128 ГБ в смартфоне Samsung Galaxy A52 получится уместить все необходимые приложения и тысячи фотографий. Переживаете, что они попадут в руки посторонних? Не стоит, ведь смартфон оснащен сканерами лица и отпечатков пальцев.",
+        "sku": "4765969",
+        "offers": {
+            "@type": "Offer",
+            "url": "https://www.dns-shop.ru/product/325cdfb173221b80/65-smartfon-samsung-galaxy-a52-128-gb-cernyj/",
+            "availability": "https://schema.org/InStock",
+            "price": 34999,
+            "priceCurrency": "RUB"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 4.73,
+            "worstRating": 0,
+            "bestRating": 5,
+            "reviewCount": 2469
+        },
+        "image": [
+            "https://c.dns-shop.ru/thumb/st4/fit/300/300/56bb4ac83bea1e6f65c182c3f6ae0215/ed119b3f00d58fd4eeb972d5bcb9f899d8b57c58bc4ce48d619583451dc6006d.jpg",
+            "https://c.dns-shop.ru/thumb/st4/fit/300/300/c198f0d873ef958ecbb831c65c243e7c/8570ea4d2c8bebf7f8f88df29cc19327a5541f208c675b59d5bfcf15e7daf68f.jpg",
+            "https://c.dns-shop.ru/thumb/st4/fit/300/300/56494f5701082aef848b7c493de58b6e/b372943299b26954cbeb1accf3e5dde7934751755bc2d369c369e5ae8347dc3c.jpg"
+        ],
+        "brand": {
+            "@type": "Brand",
+            "name": "Samsung"
+        }
+    },
+    "message": "",
+    "errors": []
+}
