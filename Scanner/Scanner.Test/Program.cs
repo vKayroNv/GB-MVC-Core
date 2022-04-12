@@ -16,13 +16,13 @@ using Scanner.Visitor;
 
 IMonitorData monitorData = new MonitorData();
 
-IMonitoringSystemDevice monitoringSystemDevice = new MonitoringSystemDevice(monitorData);
+//IMonitoringSystemDevice monitoringSystemDevice = new MonitoringSystemDevice(monitorData);
 
-MonitorDeviceContext deviceContext = new(monitoringSystemDevice);
+//MonitorDeviceContext monitorDeviceContext = new(monitoringSystemDevice);
 
-deviceContext.RunMonitorProcess();
+//monitorDeviceContext.RunMonitorProcess();
 
-//DeviceVisitor visitor = new();
+DeviceVisitor deviceVisitor = new();
 
-//IDeviceInfo deviceInfo = new ScannerDeviceInfo();
-//visitor.VisitScanner(deviceInfo);
+IDeviceInfo deviceInfo = new ScannerDeviceInfo(monitorData);
+deviceInfo.Accept(deviceVisitor);

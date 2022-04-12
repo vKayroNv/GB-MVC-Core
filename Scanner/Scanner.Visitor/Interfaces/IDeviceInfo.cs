@@ -2,8 +2,9 @@
 {
     public interface IDeviceInfo
     {
-        ICpuData Cpu { get; }
-        IRamMemory Ram { get; }
+        int Cpu { get; }
+        int Ram { get; }
+
         void Accept(IMonitorVisitor visitor);
     }
 }
