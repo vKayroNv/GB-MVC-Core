@@ -13,6 +13,8 @@ namespace Filemanager
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
+
+            new MainWindow().Show();
         }
     }
 }
