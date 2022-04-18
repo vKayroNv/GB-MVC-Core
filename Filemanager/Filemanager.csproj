@@ -12,7 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Filemanager.Interfaces\Filemanager.Interfaces.csproj" />
+    <ProjectReference Include="..\Filemanager.Abstractions\Filemanager.Abstractions.csproj" />
+    <ProjectReference Include="..\Filemanager.Core\Filemanager.Core.csproj" />
   </ItemGroup>
 
 </Project>

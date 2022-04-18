@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Filemanager.Entities.Models
+namespace Filemanager.Abstractions.Entities.Models
 {
     public class DataGridItemModel
     {

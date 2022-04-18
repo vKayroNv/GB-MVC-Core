@@ -1,5 +1,7 @@
 ﻿using Autofac;
-using Filemanager.Entities.ViewModels;
+using Filemanager.Abstractions.Interfaces.Services;
+using Filemanager.Abstractions.Interfaces.ViewModels;
+using Filemanager.Core;
 
 namespace Filemanager
 {
@@ -8,13 +10,15 @@ namespace Filemanager
         public static void RegisterFileManagerTypes(this ContainerBuilder builder)
         {
             builder.RegisterType<MainWindow>().AsSelf();
-            builder.RegisterType<MainWindowViewModel>().AsSelf().SingleInstance();
+            builder.RegisterType<MainWindowViewModel>().As<IMainWindowViewModel>().SingleInstance();
+
+            builder.RegisterType<DataService>().As<IDataService>().AutoActivate();
         }
 
         public static void LinkDataContexts(this ILifetimeScope scope)
         {
             var window = scope.Resolve<MainWindow>();
-            var context = scope.Resolve<MainWindowViewModel>();
+            var context = scope.Resolve<IMainWindowViewModel>();
 
             window.DataContext = context;
             window.Show();

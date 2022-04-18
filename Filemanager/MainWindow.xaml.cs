@@ -32,18 +32,22 @@ namespace Filemanager
             {
                 case "Name":
                     e.Column.Header = "Имя";
+                    e.Column.Width = new DataGridLength(180);
                     break;
 
                 case "Size":
                     e.Column.Header = "Размер";
+                    e.Column.Width = new DataGridLength(80);
                     break;
 
                 case "CreationTime":
                     e.Column.Header = "Дата создания";
+                    e.Column.Width = new DataGridLength(120);
                     break;
 
                 case "UpdatedTime":
                     e.Column.Header = "Дата обновления";
+                    e.Column.Width = new DataGridLength(120);
                     break;
 
                 default:
