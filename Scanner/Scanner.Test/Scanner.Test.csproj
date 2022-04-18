@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Scanner.Visitor\Scanner.Visitor.csproj" />
     <ProjectReference Include="..\Scanner.Emulator\Scanner.Emulator.csproj" />
   </ItemGroup>
