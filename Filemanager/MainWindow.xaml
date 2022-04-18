@@ -14,7 +14,11 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBox Text="{Binding Path, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Text="{Binding Path, UpdateSourceTrigger=PropertyChanged}">
+            <TextBox.InputBindings>
+                <KeyBinding Command="{Binding ChangePathFromUICommand}" Key="Return"/>
+            </TextBox.InputBindings>
+        </TextBox>
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>

@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Filemanager.Abstractions.Entities.Models;
 
 namespace Filemanager.Abstractions.Interfaces.Services
 {
     public interface IDataService
     {
+        void SetPath(string path);
+
+        List<DataGridItemModel> GetDataGridItems();
     }
 }

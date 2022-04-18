@@ -1,44 +1,33 @@
 ﻿using Filemanager.Abstractions.Entities.Models;
 using Filemanager.Abstractions.Interfaces.Services;
-using Filemanager.Abstractions.Interfaces.ViewModels;
 
 namespace Filemanager.Core
 {
     public class DataService : IDataService
     {
-        private readonly IMainWindowViewModel _mainWindowView = null!;
-
         private string _path = null!;
-
-        public DataService(IMainWindowViewModel mainWindowView)
-        {
-            _mainWindowView = mainWindowView;
-
-            Task.Factory.StartNew(() =>
-            {
-                _mainWindowView.Path = _path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                GetDataGridItems();
-
-                Thread.Sleep(5000);
-
-                _mainWindowView.Path = _path = "\\\\";
-                GetDataGridItems();
-            });
-
-        }
 
         public void SetPath(string path) => _path = path;
 
-        public void GetDataGridItems()
+        public List<DataGridItemModel> GetDataGridItems()
         {
             if (_path == "\\\\")
-                GetDrivesEntries();
+            {
+                return GetDrivesEntries();
+            }
             else
-                GetDirectoryEntries();
+            {
+                return GetDirectoryEntries();
+            }
         }
 
-        private void GetDirectoryEntries()
+        private List<DataGridItemModel> GetDirectoryEntries()
         {
+            if (!Directory.Exists(_path))
+            {
+                return null!;
+            }
+
             var result = new List<DataGridItemModel>();
 
             DirectoryInfo directoryInfo = new(_path);
@@ -65,10 +54,10 @@ namespace Filemanager.Core
                 });
             }
 
-            _mainWindowView.DataGridItems = result;
+            return result;
         }
 
-        private void GetDrivesEntries()
+        private List<DataGridItemModel> GetDrivesEntries()
         {
             var result = new List<DataGridItemModel>();
 
@@ -83,7 +72,7 @@ namespace Filemanager.Core
                 });
             }
 
-            _mainWindowView.DataGridItems = result;
+            return result;
         }
     }
 }
