@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace Filemanager
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -35,9 +32,14 @@ namespace Filemanager
                     e.Column.Width = new DataGridLength(180);
                     break;
 
+                case "TypeItem":
+                    e.Column.Header = "Тип";
+                    e.Column.Width = new DataGridLength(50);
+                    break;
+
                 case "Size":
                     e.Column.Header = "Размер";
-                    e.Column.Width = new DataGridLength(80);
+                    e.Column.Width = new DataGridLength(70);
                     break;
 
                 case "CreationTime":

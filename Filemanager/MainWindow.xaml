@@ -14,7 +14,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBox Text="{Binding Path}"/>
+        <TextBox Text="{Binding Path, UpdateSourceTrigger=PropertyChanged}"/>
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -27,8 +27,8 @@
             <ScrollViewer Grid.Column="1" 
                           HorizontalScrollBarVisibility="Auto" 
                           VerticalScrollBarVisibility="Auto">
-                <DataGrid 
-                    ItemsSource="{Binding DataGridItems}"
+                <DataGrid
+                    ItemsSource="{Binding DataGridItems, UpdateSourceTrigger=PropertyChanged}"
                     AutoGeneratingColumn="DataGrid_AutoGeneratingColumn"
                     CanUserAddRows="False"
                     CanUserDeleteRows="False"
