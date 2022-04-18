@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,31 @@ namespace Filemanager
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void DataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        {
+            switch (e.PropertyName)
+            {
+                case "Name":
+                    e.Column.Header = "Имя";
+                    break;
+
+                case "Size":
+                    e.Column.Header = "Размер";
+                    break;
+
+                case "CreationTime":
+                    e.Column.Header = "Дата создания";
+                    break;
+
+                case "UpdatedTime":
+                    e.Column.Header = "Дата обновления";
+                    break;
+
+                default:
+                    break;
+            }
         }
     }
 }

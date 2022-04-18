@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Autofac;
 
 namespace Filemanager
 {
@@ -14,7 +15,16 @@ namespace Filemanager
         {
             base.OnStartup(e);
 
-            new MainWindow().Show();
+            var builder = new ContainerBuilder();
+
+            builder.RegisterFileManagerTypes();
+
+            var container = builder.Build();
+
+            using (var scope = container.BeginLifetimeScope())
+            {
+                scope.LinkDataContexts();
+            }
         }
     }
 }

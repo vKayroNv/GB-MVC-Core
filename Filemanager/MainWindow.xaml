@@ -24,17 +24,18 @@
 
             <TreeView/>
 
-            <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-                <DataGrid>
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Имя"/>
-                        <DataGridTextColumn Header="Размер"/>
-                        <DataGridTextColumn Header="Дата создания"/>
-                        <DataGridTextColumn Header="Дата изменения"/>
-                    </DataGrid.Columns>
+            <ScrollViewer Grid.Column="1" 
+                          HorizontalScrollBarVisibility="Auto" 
+                          VerticalScrollBarVisibility="Auto">
+                <DataGrid 
+                    ItemsSource="{Binding DataGridItems}"
+                    AutoGeneratingColumn="DataGrid_AutoGeneratingColumn"
+                    CanUserAddRows="False"
+                    CanUserDeleteRows="False"
+                    CanUserReorderColumns="False"
+                    CanUserResizeRows="False">
                 </DataGrid>
             </ScrollViewer>
-
         </Grid>
     </Grid>
 </Window>
