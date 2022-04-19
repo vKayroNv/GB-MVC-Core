@@ -11,9 +11,4 @@
     <PackageReference Include="Autofac" Version="6.3.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Filemanager.Abstractions\Filemanager.Abstractions.csproj" />
-    <ProjectReference Include="..\Filemanager.Core\Filemanager.Core.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -14,7 +14,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBox Text="{Binding Path, UpdateSourceTrigger=PropertyChanged}">
+        <TextBox Padding="5 0 0 0" Text="{Binding Path, UpdateSourceTrigger=PropertyChanged}">
             <TextBox.InputBindings>
                 <KeyBinding Command="{Binding ChangePathFromUICommand}" Key="Return"/>
             </TextBox.InputBindings>
@@ -28,18 +28,30 @@
 
             <TreeView/>
 
-            <ScrollViewer Grid.Column="1" 
-                          HorizontalScrollBarVisibility="Auto" 
-                          VerticalScrollBarVisibility="Auto">
-                <DataGrid
-                    ItemsSource="{Binding DataGridItems, UpdateSourceTrigger=PropertyChanged}"
-                    AutoGeneratingColumn="DataGrid_AutoGeneratingColumn"
-                    CanUserAddRows="False"
-                    CanUserDeleteRows="False"
-                    CanUserReorderColumns="False"
-                    CanUserResizeRows="False">
-                </DataGrid>
-            </ScrollViewer>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="120"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0"/>
+                    <Button Grid.Column="1"/>
+                    <Button Grid.Column="2"/>
+                    <Button Grid.Column="3"/>
+                    <Button Grid.Column="4"/>
+                </Grid>
+
+                <ListBox Grid.Row="1">
+                </ListBox>
+            </Grid>
         </Grid>
     </Grid>
 </Window>
