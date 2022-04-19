@@ -15,7 +15,12 @@ namespace FictionalOffice.MVC.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(new CompanyDataViewModel()
+            {
+                CompanyName = "Company",
+                Phone = "+7(789)123-45-67",
+                Email = "support@company.com"
+            });
         }
 
         public IActionResult Privacy()
