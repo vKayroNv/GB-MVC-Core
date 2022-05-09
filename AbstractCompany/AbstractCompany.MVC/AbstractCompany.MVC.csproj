@@ -14,9 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\AbstractCompany.Services\AbstractCompany.Services.csproj" />
-    <ProjectReference Include="..\AbstractCompany.Identity\AbstractCompany.Identity.csproj" />
+    <ProjectReference Include="..\AbstractCompany.Notification\AbstractCompany.Notification.csproj" />
     <ProjectReference Include="..\AbstractCompany.Services\AbstractCompany.Services.csproj" />
+    <ProjectReference Include="..\AbstractCompany.Identity\AbstractCompany.Identity.csproj" />
   </ItemGroup>
 
 </Project>

@@ -11,13 +11,13 @@ namespace AbstractCompany.MVC.Controllers
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly ILogger<AccountController> _logger;
-        private readonly EmailService _emailService;
+        private readonly IEmailService _emailService;
 
         public AccountController(
             UserManager<User> userManager,
             SignInManager<User> signInManager,
             ILogger<AccountController> logger,
-            EmailService emailService)
+            IEmailService emailService)
         {
             _userManager = userManager;
             _signInManager = signInManager;

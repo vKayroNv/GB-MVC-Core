@@ -1,15 +1,19 @@
 using AbstractCompany.Identity;
 using AbstractCompany.Identity.Models;
+using AbstractCompany.Notification;
 using AbstractCompany.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Quartz;
+using Quartz.Impl;
+using Quartz.Spi;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var services = builder.Services;
 var configuration = builder.Configuration;
 
-services.AddTransient<EmailService>();
+services.AddTransient<IEmailService, EmailService>();
 
 services.AddIdentity<User, IdentityRole>()
    .AddEntityFrameworkStores<DatabaseContext>()
@@ -38,7 +42,16 @@ services.ConfigureApplicationCookie(opt =>
 
 services.AddControllersWithViews();
 
-services.AddDbContext<DatabaseContext>(s => s.UseSqlite(configuration.GetConnectionString("Identity")));
+//services.AddDbContext<DatabaseContext>(s => s.UseSqlite(configuration.GetConnectionString("Identity")));
+services.AddDbContext<DatabaseContext>(s => s.UseSqlite(configuration.GetConnectionString("Identity-homepc")));
+
+
+services.AddSingleton<IJobFactory, SingletonJobFactory>();
+services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
+services.AddTransient<NotificationsJob>();
+services.AddSingleton(new JobSchedule(typeof(NotificationsJob), "20 00 19 ? * * *"));
+services.AddHostedService<QuartzHostedService>();
+
 
 var app = builder.Build();
 
